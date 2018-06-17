@@ -16,13 +16,15 @@
 }
 .tabla-maestra {
     padding-left: 40px;
+    padding-right: 40px;
      overflow:scroll;
      height:220px;
 }
 .tabla-atributos {
     padding-left: 40px;
+     padding-right: 40px;
      overflow:scroll;
-     height:300px;
+     height:345px;
 }
 .tabla-maestra td{
     padding-left: 1px;
@@ -35,13 +37,17 @@
     width: 800px;
 }
 .btn-opciones{
-    display: inline-block;
-    margin-left: 6rem;
+    position: fixed;
+    margin-left: 10rem;
+    top: 15px;
 }
 .btn-home{
     margin: 14px;
     display: inline-block;
     margin-left: 45px;
+}
+.btn-home a{
+    color: white;
 }
 
 .btn-conf{
@@ -50,15 +56,17 @@
     display: inline-block;
 }
 .opciones-usuario{
-    display: inline-block;
-    margin-left: 135px;
+    position: fixed;
+    top: 12px;
+    right: 45px;
+    
 }
 .account-item .nombre-usuario a{
    color: white;
 }
 .opciones-header button{
     margin-left: 30px;
-    font-size: 18px
+    font-size: 15px;
 }
 
 
