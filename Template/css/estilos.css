@@ -1,0 +1,64 @@
+.logo h3{
+    color: white;
+}
+.titulo-tablas-sidebar{
+    margin: 25px;
+}
+.titulo-tablas-sidebar h3{
+    font-size: 20px;
+}
+.titulo-atributos-sidebar{
+    margin: 25px;
+    background-color: white;
+}
+.titulo-atributos-sidebar h3{
+    font-size: 20px;
+}
+.tabla-maestra {
+    padding-left: 40px;
+     overflow:scroll;
+     height:220px;
+}
+.tabla-atributos {
+    padding-left: 40px;
+     overflow:scroll;
+     height:300px;
+}
+.tabla-maestra td{
+    padding-left: 1px;
+}
+.tabla-atributos td{
+    padding-left: 1px;
+}
+.opciones-header{
+    display: inline-block;
+    width: 800px;
+}
+.btn-opciones{
+    display: inline-block;
+    margin-left: 6rem;
+}
+.btn-home{
+    margin: 14px;
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.btn-conf{
+    margin: 14px;
+    margin-left: 50px;
+    display: inline-block;
+}
+.opciones-usuario{
+    display: inline-block;
+    margin-left: 135px;
+}
+.account-item .nombre-usuario a{
+   color: white;
+}
+.opciones-header button{
+    margin-left: 30px;
+    font-size: 18px
+}
+
+
