@@ -177,13 +177,13 @@
                        <a href="index.html"><i class="fa fa-home fa-lg"></i></a>
                     </div>
                     <div class="btn-opciones">
-                        <button class="au-btn au-btn-icon au-btn--green btn-Nuevo" type="button"  data-toggle="modal" data-target="#scrollmodal">
+                        <button class="au-btn au-btn-icon au-btn--green btn-Nuevo" type="button"  data-toggle="modal" data-target="#modalNuevo">
                             <i class="fa fa-plus"></i>Nuevo
                         </button>
-                        <button class="au-btn au-btn-icon au-btn--green btn-Editar" type="button"  data-toggle="modal" data-target="#scrollmodal">
+                        <button class="au-btn au-btn-icon au-btn--green btn-Editar" type="button"  data-toggle="modal" data-target="#modalEditar">
                             <i class="fa fa-edit"></i>Editar
                         </button>
-                        <button class="au-btn au-btn-icon au-btn--green btn-Eliminar" type="button"  data-toggle="modal" data-target="#scrollmodal">
+                        <button class="au-btn au-btn-icon au-btn--green btn-Eliminar" type="button"  data-toggle="modal" data-target="#modalEliminar">
                             <i class="fa fa-trash"></i>Eliminar
                         </button> 
                     </div>
@@ -395,11 +395,13 @@
                                     <div class="au-breadcrumb-left">
                                         <ul class="list-unstyled list-inline au-breadcrumb__list">
                                             <li class="list-inline-item active">
-                                                <a href="#">Inicio</a>
+                                                <a href="#">Tablas Maestras</a>
                                             </li>
                                             <li class="list-inline-item seprate">
                                                 <span>/</span>
                                             </li>
+                                             <li class="list-inline-item">Tabla 1
+                                             </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -438,12 +440,11 @@
                                             <i class="zmdi zmdi-filter-list"></i>filters</button>
                                     </div>
                                 </div>
-                                <div >
-                                    <table id="tabla-registros" class="display">
+                                <div class="tabla-registros">
+                                    <table id="tabla-registros" class="display" >
                                         <thead>
                                             <tr>
-                                                <th>
-                                                </th>
+                                               <th></th>
                                                 <th>Atributo 1</th>
                                                 <th>Atributo 2</th>
                                                 <th>Atributo 3</th>
@@ -454,9 +455,9 @@
                                         </thead>
                                         <tbody>
                                             <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -472,9 +473,9 @@
                                                 <td>$679.00</td>
                                             </tr>
                                              <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -490,9 +491,9 @@
                                                 <td>$679.00</td>
                                             </tr>
                                              <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -508,9 +509,9 @@
                                                 <td>$679.00</td>
                                             </tr>
                                              <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -526,9 +527,9 @@
                                                 <td>$679.00</td>
                                             </tr>
                                              <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -544,9 +545,9 @@
                                                 <td>$679.00</td>
                                             </tr>
                                             <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -561,11 +562,10 @@
                                                 </td>
                                                 <td>$679.00</td>
                                             </tr>
-                                            <tr class="spacer"></tr>
                                             <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -580,17 +580,16 @@
                                                 </td>
                                                 <td>$999.00</td>
                                             </tr>
-                                            <tr class="spacer"></tr>
                                             <tr class="tr-shadow">
-                                                <td>
+                                              <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
-                                                <td>Lori Lynch</td>
+                                               <td>Lori Lynch</td>
                                                 <td>
-                                                    <span class="block-email">lyn@example.com</span>
+                                                    <span class="block-email">john@example.com</span>
                                                 </td>
                                                 <td class="desc">iPhone X 256Gb Black</td>
                                                 <td>2018-09-25 19:03</td>
@@ -599,11 +598,10 @@
                                                 </td>
                                                 <td>$1199.00</td>
                                             </tr>
-                                            <tr class="spacer"></tr>
                                             <tr class="tr-shadow">
-                                                <td>
+                                               <td>
                                                     <label class="au-checkbox">
-                                                        <input type="checkbox">
+                                                        <input type="radio" name="select-reg" onclick="uncheckRadio(this)" value="">
                                                         <span class="au-checkmark"></span>
                                                     </label>
                                                 </td>
@@ -640,59 +638,44 @@
             </section>
             <!-- END PAGE CONTAINER-->
         </div>
-        <!-- modal scroll -->
-			<div class="modal fade" id="scrollmodal" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
+        <!-- modal Nuevo -->
+			<div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="modalNuevoLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="scrollmodalLabel">Scrolling Long Content Modal</h5>
+							<h5 class="modal-title" id="modalNuevoLabel">Insertar Registro</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body">
-							<p>
-								Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-								risus, porta ac consectetur ac, vestibulum at eros.
-								<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-								faucibus dolor auctor.
-								<br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-								Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-								<br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-								leo risus, porta ac consectetur ac, vestibulum at eros.
-								<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-								faucibus dolor auctor.
-								<br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-								Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-								<br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-								leo risus, porta ac consectetur ac, vestibulum at eros.
-								<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-								faucibus dolor auctor.
-								<br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-								Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-								<br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-								leo risus, porta ac consectetur ac, vestibulum at eros.
-								<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-								faucibus dolor auctor.
-								<br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-								Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-								<br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-								leo risus, porta ac consectetur ac, vestibulum at eros.
-								<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-								faucibus dolor auctor.
-								<br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-								Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-								<br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-								leo risus, porta ac consectetur ac, vestibulum at eros.
-								<br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-								faucibus dolor auctor.
-								<br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-								Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-							</p>
+							nuevo
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-							<button type="button" class="btn btn-primary">Confirm</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-primary">Grabar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        <!-- end modal scroll -->
+        
+        <!-- modal Editar -->
+			<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEditarLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalEditarLabel">Editar Registro</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							editar
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-primary">Grabar</button>
 						</div>
 					</div>
 				</div>
@@ -739,6 +722,21 @@
             } );
         } );
     </script>
+    <script language="JavaScript">
+        var era;
+        var previo=null;
+        function uncheckRadio(rbutton){
+            if(previo &&previo!=rbutton)
+            {
+                previo.era=false;
+            }
+            if(rbutton.checked==true && rbutton.era==true){
+                rbutton.checked=false;
+            }
+            rbutton.era=rbutton.checked;
+            previo=rbutton;
+        }
+</script>
 
 </body>
 
