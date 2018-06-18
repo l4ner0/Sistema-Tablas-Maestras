@@ -30,11 +30,15 @@
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <link href="vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
-
+    
+   
+    
+    
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
      <link href="css/estilos.css" rel="stylesheet">
-   
+    <!-- Plugins-->
+    <link rel="stylesheet" href="plugins/DataTables/datatables.min.css">
 
 </head>
 
@@ -52,7 +56,7 @@
             </div>
             <div class="tabla-maestra">
                 <div class="table-responsive">
-                    <table class="table" style="">
+                    <table class="table">
                         <tbody>
                             <tr>
                                 <td><a href="CRUD.html">Tabla 1</a></td>
@@ -410,93 +414,218 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xl-8">
-                                <!-- RECENT REPORT 2-->
-                                <div class="recent-report2">
-                                    <h3 class="title-3">recent reports</h3>
-                                    <div class="chart-info">
-                                        <div class="chart-info__left">
-                                            <div class="chart-note">
-                                                <span class="dot dot--blue"></span>
-                                                <span>products</span>
-                                            </div>
-                                            <div class="chart-note">
-                                                <span class="dot dot--green"></span>
-                                                <span>Services</span>
-                                            </div>
+                            <div class="col-xl-12">
+                                <h3 class="title-5 m-b-35"> <li class="fa fa-table"></li> Tabla 1</h3>
+                                <div class="table-data__tool">
+                                    <div class="table-data__tool-left">
+                                        <div class="rs-select2--light rs-select2--md">
+                                            <select class="js-select2" name="property">
+                                                <option selected="selected">All Properties</option>
+                                                <option value="">Option 1</option>
+                                                <option value="">Option 2</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
                                         </div>
-                                        <div class="chart-info-right">
-                                            <div class="rs-select2--dark rs-select2--md m-r-10">
-                                                <select class="js-select2" name="property">
-                                                    <option selected="selected">All Properties</option>
-                                                    <option value="">Products</option>
-                                                    <option value="">Services</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                            <div class="rs-select2--dark rs-select2--sm">
-                                                <select class="js-select2 au-select-dark" name="time">
-                                                    <option selected="selected">All Time</option>
-                                                    <option value="">By Month</option>
-                                                    <option value="">By Day</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
+                                        <div class="rs-select2--light rs-select2--sm">
+                                            <select class="js-select2" name="time">
+                                                <option selected="selected">Today</option>
+                                                <option value="">3 Days</option>
+                                                <option value="">1 Week</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
                                         </div>
-                                    </div>
-                                    <div class="recent-report__chart">
-                                        <canvas id="recent-rep2-chart"></canvas>
+                                        <button class="au-btn-filter">
+                                            <i class="zmdi zmdi-filter-list"></i>filters</button>
                                     </div>
                                 </div>
-                                <!-- END RECENT REPORT 2             -->
-                            </div>
-                            <div class="col-xl-4">
-                                <!-- TASK PROGRESS-->
-                                <div class="task-progress">
-                                    <h3 class="title-3">task progress</h3>
-                                    <div class="au-skill-container">
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">Web Design</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="90">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">HTML5/CSS3</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="85">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">WordPress</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="95">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">Support</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="95">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div >
+                                    <table id="tabla-registros" class="display">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                </th>
+                                                <th>Atributo 1</th>
+                                                <th>Atributo 2</th>
+                                                <th>Atributo 3</th>
+                                                <th>Atributo 4</th>
+                                                <th>Atributo 5</th>
+                                                <th>Atributo 6</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lori@example.com</span>
+                                                </td>
+                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$679.00</td>
+                                            </tr>
+                                             <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lori@example.com</span>
+                                                </td>
+                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$679.00</td>
+                                            </tr>
+                                             <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lori@example.com</span>
+                                                </td>
+                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$679.00</td>
+                                            </tr>
+                                             <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lori@example.com</span>
+                                                </td>
+                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$679.00</td>
+                                            </tr>
+                                             <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lori@example.com</span>
+                                                </td>
+                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$679.00</td>
+                                            </tr>
+                                            <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lori@example.com</span>
+                                                </td>
+                                                <td class="desc">Samsung S8 Black</td>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$679.00</td>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">john@example.com</span>
+                                                </td>
+                                                <td class="desc">iPhone X 64Gb Grey</td>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$999.00</td>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">lyn@example.com</span>
+                                                </td>
+                                                <td class="desc">iPhone X 256Gb Black</td>
+                                                <td>2018-09-25 19:03</td>
+                                                <td>
+                                                    <span class="status--denied">Denied</span>
+                                                </td>
+                                                <td>$1199.00</td>
+                                            </tr>
+                                            <tr class="spacer"></tr>
+                                            <tr class="tr-shadow">
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>Lori Lynch</td>
+                                                <td>
+                                                    <span class="block-email">doe@example.com</span>
+                                                </td>
+                                                <td class="desc">Camera C430W 4k</td>
+                                                <td>2018-09-24 19:10</td>
+                                                <td>
+                                                    <span class="status--process">Processed</span>
+                                                </td>
+                                                <td>$699.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- END TASK PROGRESS-->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            
 
             <section>
                 <div class="container-fluid">
@@ -573,7 +702,7 @@
     </div>
 
     <!-- Jquery JS-->
-    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
@@ -596,9 +725,20 @@
     <script src="vendor/vector-map/jquery.vmap.min.js"></script>
     <script src="vendor/vector-map/jquery.vmap.sampledata.js"></script>
     <script src="vendor/vector-map/jquery.vmap.world.js"></script>
-
+    <!-- Plugins -->
+    
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <script  type="text/javascript" src="plugins/DataTables/datatables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#tabla-registros').DataTable( {
+                "paging":   true,
+                "ordering": true,
+                "info":     true
+            } );
+        } );
+    </script>
 
 </body>
 
