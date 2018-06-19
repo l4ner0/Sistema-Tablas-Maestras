@@ -649,7 +649,141 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							nuevo
+				            <form action="" method="post" novalidate="novalidate">
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <label for="cc-payment" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="form-group has-success  col-md-7">
+                                        <label for="cc-name" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                                                    autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                        <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group  col-md-5">
+                                       <label for="" class="control-label mb-1">Radio</label>
+                                        <div class="form-check">
+                                            <div class="radio">
+                                                <label for="radio1" class="form-check-label ">
+                                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Option 1
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio2" class="form-check-label ">
+                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Option 2
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio3" class="form-check-label ">
+                                                    <input type="radio" id="radio3" name="radios" value="option3" class="form-check-input">Option 3
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div  class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="cc-exp" class="control-label mb-1">Atributo </label>
+                                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                                autocomplete="cc-exp">
+                                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="x_card_code" class="control-label mb-1">Atributo </label>
+                                                <div class="input-group">
+                                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                                data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="cc-payment" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="form-group has-success  col-md-7">
+                                        <label for="cc-name" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                                                    autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                        <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="textarea-input" class=" form-control-label">Textarea</label>
+                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+                                    </div>
+                                    <div  class="col-md-5">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="cc-exp" class="control-label mb-1">Atributo </label>
+                                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                                autocomplete="cc-exp">
+                                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="x_card_code" class="control-label mb-1">Atributo </label>
+                                                <div class="input-group">
+                                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                                data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-7">
+                                        <label for="cc-payment" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="form-group has-success  col-md-5">
+                                        <label for="select" class=" form-control-label">Select</label>
+                                        <select name="select" id="select" class="form-control">
+                                            <option value="0">Please select</option>
+                                            <option value="1">Option #1</option>
+                                            <option value="2">Option #2</option>
+                                            <option value="3">Option #3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group  col-md-7">
+                                        <label for="cc-number" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                                                    autocomplete="cc-number">
+                                        <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div  class="col-md-5">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="cc-exp" class="control-label mb-1">Atributo </label>
+                                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                                autocomplete="cc-exp">
+                                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="x_card_code" class="control-label mb-1">Atributo </label>
+                                                <div class="input-group">
+                                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                                data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group  col-md-7">
+                                        <label for="cc-number" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                                                    autocomplete="cc-number">
+                                        <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </form>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -671,7 +805,141 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							editar
+				            <form action="" method="post" novalidate="novalidate">
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <label for="cc-payment" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="form-group has-success  col-md-7">
+                                        <label for="cc-name" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                                                    autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                        <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group  col-md-5">
+                                       <label for="" class="control-label mb-1">Radio</label>
+                                        <div class="form-check">
+                                            <div class="radio">
+                                                <label for="radio1" class="form-check-label ">
+                                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Option 1
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio2" class="form-check-label ">
+                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Option 2
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio3" class="form-check-label ">
+                                                    <input type="radio" id="radio3" name="radios" value="option3" class="form-check-input">Option 3
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div  class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="cc-exp" class="control-label mb-1">Atributo </label>
+                                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                                autocomplete="cc-exp">
+                                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="x_card_code" class="control-label mb-1">Atributo </label>
+                                                <div class="input-group">
+                                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                                data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="cc-payment" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="form-group has-success  col-md-7">
+                                        <label for="cc-name" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                                                    autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                        <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="textarea-input" class=" form-control-label">Textarea</label>
+                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+                                    </div>
+                                    <div  class="col-md-5">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="cc-exp" class="control-label mb-1">Atributo </label>
+                                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                                autocomplete="cc-exp">
+                                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="x_card_code" class="control-label mb-1">Atributo </label>
+                                                <div class="input-group">
+                                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                                data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-7">
+                                        <label for="cc-payment" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="form-group has-success  col-md-5">
+                                        <label for="select" class=" form-control-label">Select</label>
+                                        <select name="select" id="select" class="form-control">
+                                            <option value="0">Please select</option>
+                                            <option value="1">Option #1</option>
+                                            <option value="2">Option #2</option>
+                                            <option value="3">Option #3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group  col-md-7">
+                                        <label for="cc-number" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                                                    autocomplete="cc-number">
+                                        <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div  class="col-md-5">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="cc-exp" class="control-label mb-1">Atributo </label>
+                                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                                data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                                autocomplete="cc-exp">
+                                                    <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="x_card_code" class="control-label mb-1">Atributo </label>
+                                                <div class="input-group">
+                                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                                data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group  col-md-7">
+                                        <label for="cc-number" class="control-label mb-1">Atributo </label>
+                                        <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                                                    autocomplete="cc-number">
+                                        <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </form>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -681,6 +949,30 @@
 				</div>
 			</div>
         <!-- end modal scroll -->
+        <!-- modal static -->
+			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel" aria-hidden="true"
+			 data-backdrop="static">
+				<div class="modal-dialog modal-sm" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalEliminarLabel">Static Modal</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>
+								¿Esta seguro de "Eliminar" el registro?
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-primary">Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        <!-- end modal static -->
 
     </div>
 
